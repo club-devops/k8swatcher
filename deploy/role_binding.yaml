@@ -1,0 +1,11 @@
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: k8s-watcher
+subjects:
+- kind: ServiceAccount
+  name: k8s-watcher
+roleRef:
+  kind: Role
+  name: k8s-watcher
+  apiGroup: rbac.authorization.k8s.io

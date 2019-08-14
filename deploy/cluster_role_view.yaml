@@ -1,0 +1,17 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  annotations:
+    rbac.authorization.kubernetes.io/autoupdate: "true"
+  labels:
+    kubernetes.io/bootstrapping: rbac-defaults
+    rbac.authorization.k8s.io/aggregate-to-view: "true"
+  name: k8swatcher-view
+rules:
+- apiGroups:
+  - sbtech.com
+  resources:
+   - '*'
+   - k8swatchernotifiers
+  verbs:
+   - get

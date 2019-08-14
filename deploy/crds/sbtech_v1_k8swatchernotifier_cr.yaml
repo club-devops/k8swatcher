@@ -1,0 +1,11 @@
+apiVersion: sbtech.com/v1
+kind: K8SWatcherNotifier
+metadata:
+  name: k8swatchernotifier
+spec:
+  # Add fields here
+  slack:
+    slack_url: "https://hooks.slack.com/services/blablabla"
+    channel: "test_k8s_watcher"
+
+  size: 3
